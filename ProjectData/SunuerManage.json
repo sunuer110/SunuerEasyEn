@@ -1,0 +1,836 @@
+[
+  {
+    "TableID": 1,
+    "TableName": "Admin",
+    "Remarks": "Administrator",
+    "About": "",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "AdminID",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "Administrator",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creator",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creation Time",
+        "DefaultValue": "getdate()",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Updater",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Update Time",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Del",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Delete 0 No 1 Yes",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "AdminName",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Username",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "AdminNick",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Nickname",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "PassWord",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Password",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "RoleID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Role ID",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Statues",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Status (0: Normal, 1: Frozen)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "LoginAttempts",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Login Attempt Count",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "LoginAttemptsLast",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Last Login Attempt Time",
+        "DefaultValue": "",
+        "Remarks": ""
+      }
+    ]
+  },
+  {
+    "TableID": 2,
+    "TableName": "AdminRoles",
+    "Remarks": "Role",
+    "About": "",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "RoleID",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creator",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creation Time",
+        "DefaultValue": "getdate()",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Updater",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Update Time",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Del",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Delete 0 No 1 Yes",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "RolesTitle",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Role Name",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Powers",
+        "DataType": "nvarchar(2000)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Permission Set",
+        "DefaultValue": "",
+        "Remarks": ""
+      }
+    ]
+  },
+  {
+    "TableID": 3,
+    "TableName": "AdminPower",
+    "Remarks": "Permission",
+    "About": "",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "PowerID",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creator",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creation Time",
+        "DefaultValue": "getdate()",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Updater",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Update Time",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Del",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Delete 0 No 1 Yes",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ParentID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Parent ID",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "PowerTitle",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Permission Name",
+        "DefaultValue": "",
+        "Remarks": ""
+      }
+    ]
+  },
+  {
+    "TableID": 4,
+    "TableName": "Articles",
+    "Remarks": "Article",
+    "About": "",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "ArticleID",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creator",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creation Time",
+        "DefaultValue": "getdate()",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Updater",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Update Time",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Del",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Delete 0 No 1 Yes",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "BigID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Category",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ArticleTitle",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Title",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Articlekey",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Keywords",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ArticleDesn",
+        "DataType": "nvarchar(500)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Description",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Statues",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Display (0: No, 1: Yes)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Sorts",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Sort Order",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "NavSites",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Redirect URL",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ReleaseTime",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Publish Time",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Hits",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Click Rate",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Image",
+        "DataType": "nvarchar(500)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Header Image",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Images",
+        "DataType": "nvarchar(500)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Image Collection",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Desn",
+        "DataType": "nvarchar(max)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Details",
+        "DefaultValue": "",
+        "Remarks": ""
+      }
+    ]
+  },
+  {
+    "TableID": 5,
+    "TableName": "ArticleCategory",
+    "Remarks": "Article Category",
+    "About": "",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "BigID",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "Article Category",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creator",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creation Time",
+        "DefaultValue": "getdate()",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Updater",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Update Time",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Del",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Delete 0 No 1 Yes",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ParentID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Parent ID",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Depths",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Depth (Default: 0, Top Level: 1)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ParentIDs",
+        "DataType": "nvarchar(2000)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "All Parent IDs (Separated by Commas)",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ParentIDFirst",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Top Parent ID",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Statues",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Navigation (0: No, 1: Yes)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "BigTitle",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Category Name",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "KeyTitle",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Optimized Title",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "KeyWord",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Keywords",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "KeyDesn",
+        "DataType": "nvarchar(500)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Description",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Images",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Image",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ImagesPhone",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Mobile Image",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Sorts",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Sort Order (Larger Number Comes First)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "SiteUrl",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Redirect Link",
+        "DefaultValue": "",
+        "Remarks": ""
+      }
+    ]
+  },
+  {
+    "TableID": 6,
+    "TableName": "ManageSet",
+    "Remarks": "System Settings",
+    "About": "No need to create a table, directly operate on appsettings.json",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "ID",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ManageTitle",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "System Name",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ManageKey",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "System Keywords",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ManageDesn",
+        "DataType": "nvarchar(500)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "System Description",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ManageUrl",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "System Link",
+        "DefaultValue": "",
+        "Remarks": "Temporarily Unused"
+      },
+      {
+        "FieldName": "Phone",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Phone Number",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Email",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Email",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Address",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Address",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CopyRight",
+        "DataType": "nvarchar(2000)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Copyright Information",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ImageUrl",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Image URL",
+        "DefaultValue": "",
+        "Remarks": "Temporarily Unused"
+      },
+      {
+        "FieldName": "About",
+        "DataType": "nvarchar(2000)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "System Description",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Logo",
+        "DataType": "nvarchar(200)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Logo",
+        "DefaultValue": "",
+        "Remarks": ""
+      }
+    ]
+  }
+]

@@ -1,0 +1,56 @@
+[
+  {
+    "ID": 1,
+    "Title": "Integer",
+    "DataType": "int",
+    "Sorts": 0
+  },
+  {
+    "ID": 2,
+    "Title": "String-50",
+    "DataType": "nvarchar(50)",
+    "Sorts": 0
+  },
+  {
+    "ID": 3,
+    "Title": "Date",
+    "DataType": "datetime",
+    "Sorts": 0
+  },
+  {
+    "ID": 4,
+    "Title": "String-200",
+    "DataType": "nvarchar(200)",
+    "Sorts": 0
+  },
+  {
+    "ID": 5,
+    "Title": "String-500",
+    "DataType": "nvarchar(500)",
+    "Sorts": 0
+  },
+  {
+    "ID": 6,
+    "Title": "String-2000",
+    "DataType": "nvarchar(2000)",
+    "Sorts": 0
+  },
+  {
+    "ID": 7,
+    "Title": "float",
+    "DataType": "float",
+    "Sorts": 0
+  },
+  {
+    "ID": 8,
+    "Title": "Price",
+    "DataType": "decimal(18, 2)",
+    "Sorts": 0
+  },
+  {
+    "ID": 9,
+    "Title": "String-max",
+    "DataType": "nvarchar(max)",
+    "Sorts": 0
+  }
+]
