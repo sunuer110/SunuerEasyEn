@@ -832,5 +832,411 @@
         "Remarks": ""
       }
     ]
+  },
+  {
+    "TableID": 7,
+    "TableName": "LeaveMessageSet",
+    "Remarks": "Configuration Message",
+    "About": "",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "SetID",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "Configuration ID",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creator",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creation Time",
+        "DefaultValue": "getdate()",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Updater",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Update Time",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Del",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Deleted (0 = No, 1 = Yes)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "PhoneRequire",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Phone (0 = Optional, 1 = Required)",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "NameRequire",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Name (0 = Optional, 1 = Required)",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "EmailRequire",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Email (0 = Optional, 1 = Required)",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "SystemEmail",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "System Email",
+        "DefaultValue": "",
+        "Remarks": ""
+      }
+    ]
+  },
+  {
+    "TableID": 8,
+    "TableName": "LeaveMessage",
+    "Remarks": "Message",
+    "About": "",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "ID",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creator",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creation Time",
+        "DefaultValue": "getdate()",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Updater",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UpdateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Update Time",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Del",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Deleted (0 = No, 1 = Yes)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Title",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Title",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Phone",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Phone Number",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "UserName",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Name",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Content",
+        "DataType": "nvarchar(500)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Content",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Email",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Email",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "AuditUserID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Audit Person",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "AuditStatus",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Audit Status (0 = Not Audited, 1 = Approved, 2 = Rejected)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "AuditTime",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Audit Time",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "AuditDesn",
+        "DataType": "nvarchar(500)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Audit Remarks",
+        "DefaultValue": "",
+        "Remarks": ""
+      }
+    ]
+  },
+  {
+    "TableID": 9,
+    "TableName": "SMSRule",
+    "Remarks": "Verification Code Rules",
+    "About": "",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "Rid",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "Verification Code Rules",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Statue",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Is Active (0 = Active, 1 = Inactive)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "RIP",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Is IP Restricted (0 = No Restriction, 1 = Restricted: How many messages can one IP send per day?)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "RNum",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Is Message Count Restricted (0 = No Restriction, 1 = Restricted: Per Day)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      }
+    ]
+  },
+  {
+    "TableID": 10,
+    "TableName": "SMS",
+    "Remarks": "Verification Code",
+    "About": "",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "SMSID",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creation Time",
+        "DefaultValue": "getdate()",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Phone",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Phone Number/Email",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "ClassID",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Data Type (1: Registration Verification, 2: Password Recovery Verification, 3: Login Verification)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Number",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Verification Code",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "Flag",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Failed Verification Attempts (Not Entered by the Owner)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "IsOk",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Usage Status (0 = Not Used, 1 = Used)",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "IP",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "IP",
+        "DefaultValue": "",
+        "Remarks": ""
+      }
+    ]
   }
 ]
