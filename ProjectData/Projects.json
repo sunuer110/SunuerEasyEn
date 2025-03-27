@@ -3,7 +3,8 @@
     "ProjectID": 2,
     "ProjectNameEn": "SunuerManage",
     "ProjectNameCn": "Sunuer Manage",
+    "SqlConnection": "Server=192.168.1.105,7765\\SQLSERVER2022;Database=ZHXY;User Id=sa;Password=123456;MultipleActiveResultSets=true;TrustServerCertificate=True;Max Pool Size=100;Min Pool Size=5;Pooling=true;",
     "Sorts": 1,
-    "About": ""
+    "About": "The database connection string is an example: 192.168.1.105,7765\\SQLSERVER2022. Replace it with your own database address. Also, replace the parameters Database=ZHXY;User Id=sa;Password=123456 with the actual parameters for your project.\n\nIf the database is not synchronized, you can ignore the database connection string configuration."
   }
 ]

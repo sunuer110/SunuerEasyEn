@@ -1238,5 +1238,74 @@
         "Remarks": ""
       }
     ]
+  },
+  {
+    "TableID": 11,
+    "TableName": "AdminLoginLog",
+    "Remarks": "Administrator Login Log",
+    "About": "",
+    "SortOrder": 0,
+    "Fields": [
+      {
+        "FieldName": "ID",
+        "DataType": "int",
+        "IsPrimaryKey": true,
+        "IsNotNull": true,
+        "IsAutoIncrement": true,
+        "Description": "Administrator Login Log",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "CreateDate",
+        "DataType": "datetime",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Creation Time     ",
+        "DefaultValue": "getdate()",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "AdminName",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "User name",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "IsOK",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Login Success 0, Failure 1",
+        "DefaultValue": "0",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "IP",
+        "DataType": "nvarchar(50)",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "IP",
+        "DefaultValue": "",
+        "Remarks": ""
+      },
+      {
+        "FieldName": "LoginAttempts",
+        "DataType": "int",
+        "IsPrimaryKey": false,
+        "IsNotNull": false,
+        "IsAutoIncrement": false,
+        "Description": "Login Attempt Count",
+        "DefaultValue": "0",
+        "Remarks": ""
+      }
+    ]
   }
 ]
